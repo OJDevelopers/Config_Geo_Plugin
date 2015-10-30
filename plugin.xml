@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="com.developersanddesigners.config_geo_plugin"
+      version="0.1.0">
+
+  <name>PluginConfigGeolocation</name>
+  <description>Open settings location</description>
+  <license>MIT</license>
+  <keywords>phonegap,geolocalitation,settings</keywords>
+
+
+  <js-module src="www/config_geo_plugin.js" name="Config_Geo">
+    <clobbers target="config_geo_plugin" />
+  </js-module>
+
+  <!-- android -->
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="Config_Geo">
+        <param name="android-package" value="org.developresanddesigners.config_geo_plugin.config_geo_plugin"/>
+      </feature>
+    </config-file>
+    
+    <source-file src="src/android/config_geo_plugin.java" target-dir="src/com/developersanddesigners/config_geo_plugin" />
+  </platform>
+</plugin>
