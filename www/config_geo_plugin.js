@@ -23,7 +23,7 @@ var exec = require('cordova/exec');
 var ConfigGeolocation = {
     Open: function (successCallback, errorCallback)
     {
-        cordova.exec(successCallback,
+        exec(successCallback,
               errorCallback,
               "config_geo_plugin",
               "open",
