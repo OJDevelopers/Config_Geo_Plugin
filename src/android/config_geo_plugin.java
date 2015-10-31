@@ -63,7 +63,7 @@ import java.util.StringTokenizer;
 
 @SuppressLint("SetJavaScriptEnabled")
 public class config_geo_plugin extends CordovaPlugin{
-
+	final CallbackContext ContextoRetorno;
     /**
      * Executes the request and returns PluginResult.
      *
@@ -74,13 +74,14 @@ public class config_geo_plugin extends CordovaPlugin{
      */
     public boolean execute(String action, CordovaArgs args, final CallbackContext callbackContext) throws JSONException {
         PluginResult.Status status = PluginResult.Status.OK;
+		ContextoRetorno = callbackContext;
         String result = "";
 
         //Information on settings can be found here:
         //http://developer.android.com/reference/android/provider/Settings.html
 
         if (action.equals("open")) {
-            this.cordova.getActivity().startActivity(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+            this.cordova.getActivity().startActivityForResult(new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS),1);
         } else if (action.equals("accessibility")) {
             this.cordova.getActivity().startActivity(new Intent(android.provider.Settings.ACTION_ACCESSIBILITY_SETTINGS));
         } else if (action.equals("add_account")) {
@@ -96,9 +97,6 @@ public class config_geo_plugin extends CordovaPlugin{
         } else if (action.equals("application")) {
             this.cordova.getActivity().startActivity(new Intent(android.provider.Settings.ACTION_APPLICATION_SETTINGS));
         }
-        //else if (action.equals("battery_saver")) {
-        //    this.cordova.getActivity().startActivity(new Intent(android.provider.Settings.ACTION_BATTERY_SAVER_SETTINGS));
-        //}
         else if (action.equals("bluetooth")) {
             this.cordova.getActivity().startActivity(new Intent(android.provider.Settings.ACTION_BLUETOOTH_SETTINGS));
         } else if (action.equals("captioning")) {
@@ -142,9 +140,6 @@ public class config_geo_plugin extends CordovaPlugin{
         } else if (action.equals("nfc_settings")) {
             this.cordova.getActivity().startActivity(new Intent(android.provider.Settings.ACTION_NFC_SETTINGS));
         }
-        //else if (action.equals("notification_listner")) {
-        //    this.cordova.getActivity().startActivity(new Intent(android.provider.Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS));
-        //}
         else if (action.equals("print")) {
             this.cordova.getActivity().startActivity(new Intent(android.provider.Settings.ACTION_PRINT_SETTINGS));
         } else if (action.equals("privacy")) {
@@ -180,7 +175,18 @@ public class config_geo_plugin extends CordovaPlugin{
         }
         
         callbackContext.sendPluginResult(new PluginResult(status, result));
-
         return true;
     }
+
+	protected void onActivityResult(int requestCode, int resultCode,
+             Intent data) {
+         if (requestCode == 1) {
+             if (resultCode == RESULT_OK) {
+                 // A contact was picked.  Here we will just display it
+                 // to the user.
+				 ContextoRetorno.sendPluginResult(new PluginResult("Cerro la Ventana", result));
+                 return true;
+             }
+         }
+     }
 }
