@@ -62,7 +62,7 @@ import java.util.HashMap;
 import java.util.StringTokenizer;
 
 @SuppressLint("SetJavaScriptEnabled")
-public class config_geo_plugin extends CordovaPlugin {
+public class config_geo_plugin extends CordovaPlugin, Activity {
 
     /**
      * Executes the request and returns PluginResult.
