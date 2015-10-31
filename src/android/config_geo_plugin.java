@@ -62,7 +62,7 @@ import java.util.HashMap;
 import java.util.StringTokenizer;
 
 @SuppressLint("SetJavaScriptEnabled")
-public class config_geo_plugin extends CordovaPlugin, Activity {
+public class config_geo_plugin extends CordovaPlugin,Activity {
 
     /**
      * Executes the request and returns PluginResult.
@@ -75,7 +75,7 @@ public class config_geo_plugin extends CordovaPlugin, Activity {
     public boolean execute(String action, CordovaArgs args, final CallbackContext callbackContext) throws JSONException {
         if (action.equals("open")) {
             Intent i = new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-            startActivityForResult(i); 
+            android.app.startActivityForResult(i); 
         }
         else {
             return false;
