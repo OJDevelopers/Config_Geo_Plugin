@@ -33,11 +33,7 @@ import android.widget.Toast;
 
 public class AndroidLocationActivity extends Activity {
 	
-	public void AndroidLocationActivity()
-	{
-
-	}
-
+	@Override
 	public void showSettings() {
 		
 		Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
