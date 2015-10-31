@@ -19,7 +19,6 @@
 package org.developresanddesigners.config_geo_plugin;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -62,7 +61,7 @@ import java.util.HashMap;
 import java.util.StringTokenizer;
 
 @SuppressLint("SetJavaScriptEnabled")
-public class config_geo_plugin extends CordovaPlugin,Activity {
+public class config_geo_plugin extends CordovaPlugin{
 
     /**
      * Executes the request and returns PluginResult.
