@@ -32,6 +32,11 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class AndroidLocationActivity extends Activity {
+	
+	public void AndroidLocationActivity()
+	{
+
+	}
 
 	public void showSettings() {
 		
