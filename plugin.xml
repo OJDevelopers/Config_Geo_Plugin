@@ -2,7 +2,7 @@
 
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
            id="com.developersanddesigners.config_geo_plugin"
-      version="0.1.13">
+      version="0.1.14">
 
   <name>PluginConfigGeolocation</name>
   <description>Open settings location</description>
@@ -17,12 +17,10 @@
   <!-- android -->
   <platform name="android">
     <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="Config_Geo">
+      <feature name="config_geo_plugin">
         <param name="android-package" value="org.developresanddesigners.config_geo_plugin.config_geo_plugin"/>
       </feature>
     </config-file>
-
-    <source-file src="src/android/config_geo_plugin_open.java" target-dir="src/com/developersanddesigners/config_geo_plugin_open" />
     <source-file src="src/android/config_geo_plugin.java" target-dir="src/com/developersanddesigners/config_geo_plugin" />
   </platform>
 </plugin>
