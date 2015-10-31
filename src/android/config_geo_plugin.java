@@ -18,6 +18,7 @@
 */
 package org.developresanddesigners.config_geo_plugin;
 
+import android.*;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
