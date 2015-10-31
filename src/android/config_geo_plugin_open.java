@@ -31,9 +31,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class AndroidLocationActivity extends Activity {
+public class config_geo_plugin_open extends Activity {
 	
-	@Override
 	public void showSettings() {
 		
 		Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);

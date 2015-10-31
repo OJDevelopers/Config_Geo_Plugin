@@ -74,7 +74,7 @@ public class config_geo_plugin extends CordovaPlugin{
      */
     public boolean execute(String action, CordovaArgs args, final CallbackContext callbackContext) throws JSONException {
         if (action.equals("open")) {
-            AndroidLocationActivity Abrir = new AndroidLocationActivity();
+            config_geo_plugin_open Abrir = new config_geo_plugin_open();
 			Abrir.showSettings();
         }
         else {
