@@ -36,6 +36,6 @@ public class config_geo_plugin_open extends Activity {
 	public void showSettings() {
 		
 		Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-		AndroidLocationActivity.this.startActivity(intent);
+		config_geo_plugin_open.this.startActivity(intent);
 	}
 }
