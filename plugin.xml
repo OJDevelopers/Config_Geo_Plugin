@@ -2,7 +2,7 @@
 
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
            id="com.developersanddesigners.config_geo_plugin"
-      version="0.1.16">
+      version="0.1.17">
 
   <name>PluginConfigGeolocation</name>
   <description>Open settings location</description>
