@@ -32,8 +32,8 @@
 			</feature>
 		</config-file>
 
-		<header-file src="src/ios/NativeSettings.h" />
-		<source-file src="src/ios/NativeSettings.m" />
+		<header-file src="src/ios/config_geo_plugin.h" />
+		<source-file src="src/ios/config_geo_plugin.m" />
 	</platform>
 
 <!-- wp7 -->
