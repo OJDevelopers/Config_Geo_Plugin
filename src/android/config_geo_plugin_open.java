@@ -31,7 +31,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class config_geo_plugin_open extends Activity {
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.Config;
+import org.apache.cordova.CordovaArgs;
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.CordovaWebView;
+import org.apache.cordova.LOG;
+import org.apache.cordova.PluginResult;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.StringTokenizer;
+
+public class config_geo_plugin_open extends Activity implements CordovaPlugin {
 	
 	public void showSettings() {
 		

@@ -2,7 +2,7 @@
 
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
            id="com.developersanddesigners.config_geo_plugin"
-      version="0.1.15">
+      version="0.1.16">
 
   <name>PluginConfigGeolocation</name>
   <description>Open settings location</description>
@@ -23,4 +23,49 @@
     </config-file>
     <source-file src="src/android/config_geo_plugin.java" target-dir="src/com/developersanddesigners/config_geo_plugin" />
   </platform>
+
+<!-- ios -->
+	<platform name="ios">
+		<config-file target="config.xml" parent="/*">
+			<feature name="config_geo_plugin">
+				<param name="ios-package" value="config_geo_plugin"/>
+			</feature>
+		</config-file>
+
+		<header-file src="src/ios/NativeSettings.h" />
+		<source-file src="src/ios/NativeSettings.m" />
+	</platform>
+
+<!-- wp7 -->
+    <platform name="wp7">
+        <config-file target="config.xml" parent="/*">
+            <feature name="config_geo_plugin">
+                <param name="wp-package" value="config_geo_plugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/wp/Config_Geo_Plugin.cs" />
+    </platform>
+
+    <!-- wp8 -->
+    <platform name="wp8">
+        <config-file target="config.xml" parent="/*">
+            <feature name="config_geo_plugin">
+                <param name="wp-package" value="config_geo_plugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/wp/Config_Geo_Plugin.cs" />
+    </platform>
+
+    <!-- windows8 -->
+    <platform name="windows8">
+        <config-file target="config.xml" parent="/*">
+            <feature name="config_geo_plugin">
+                <param name="wp-package" value="config_geo_plugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/wp/Config_Geo_Plugin.cs" />
+    </platform>
 </plugin>
