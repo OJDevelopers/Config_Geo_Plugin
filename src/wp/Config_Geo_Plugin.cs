@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.Windows;
+using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Ink;
@@ -21,7 +22,7 @@ namespace WPCordovaClassLib.Cordova.Commands
 {
     public class config_geo_plugin : BaseCommand
     {
-        public async bool open()
+        public async Task<bool> open()
         {
             try
             {
