@@ -21,9 +21,16 @@ namespace WPCordovaClassLib.Cordova.Commands
 {
     public class config_geo_plugin : BaseCommand
     {
-        public void open()
+        public async bool open()
         {
-            Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings-bluetooth:"));
+            try
+            {
+                await Windows.System.Launcher.LaunchUriAsync(new Uri("ms-settings-location:"));
+                return true;
+            }
+            catch{
+                return false;
+            }
         }
     }
 }
