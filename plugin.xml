@@ -44,7 +44,7 @@
             </feature>
         </config-file>
 
-        <source-file src="src/wp/Config_Geo_Plugin.cs" />
+        <source-file src="src/wp/config_geo_plugin.cs" />
     </platform>
 
     <!-- wp8 -->
@@ -55,17 +55,6 @@
             </feature>
         </config-file>
 
-        <source-file src="src/wp/Config_Geo_Plugin.cs" />
-    </platform>
-
-    <!-- windows8 -->
-    <platform name="windows8">
-        <config-file target="config.xml" parent="/*">
-            <feature name="config_geo_plugin">
-                <param name="wp-package" value="config_geo_plugin"/>
-            </feature>
-        </config-file>
-
-        <source-file src="src/wp/Config_Geo_Plugin.cs" />
+        <source-file src="src/wp/config_geo_plugin.cs" />
     </platform>
 </plugin>
