@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 
-<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
            id="com.developersanddesigners.config_geo_plugin"
       version="0.1.19">
 
@@ -8,6 +8,9 @@
   <description>Open settings location</description>
   <license>MIT</license>
   <keywords>phonegap,geolocalitation,settings</keywords>
+  <engines>
+    <engine name="cordova" version=">=3.3.0" />
+  </engines>
 
 
   <js-module src="www/config_geo_plugin.js" name="Config_Geo">
